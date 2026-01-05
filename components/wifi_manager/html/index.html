@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+        <html>  
+        <head>  
+        <meta name="  viewport"    content="  width=device-width, initial-scale=1,   
+        user-scalable=no"   >  
+        <link rel="  icon"    type="  image/x-icon"    href="  favicon.ico"   >  
+        <link rel="  stylesheet"   href="  app.css"  >  
+        </head>  
+        <body>  
+        <div class="  container"  >  
+        <div class="  top"  >  
+        <h5><i> ESP32 WiFiManager</i></h5>  
+        </div>  
+        <div class="  title"  >  
+        <h4>Seleziona SSID a cui desideri collegarti</h4>  
+        </div>  
+
+        <form action="/post"    method="post"    >  
+
+        <label for="  SSID"   >SSID:</label>  
+        <select name="ssid"    id="ssid"   > 
+		<!--SSID_OPTIONS-->
+ 
+	  	</select>  
+        <br><br>  
+        <label for="pw"   >Password:</label>  
+
+        <input type="text"    name="pw"     placeholder="password"    /> <br>  
+
+        <input class="button"   type="submit"    value="Conferma"    />  
+        </form>  
+
+        </div>  
+        </body>  
+
+        </html>
