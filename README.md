@@ -22,7 +22,7 @@ Questo progetto permette a un ESP32 di visualizzare in tempo reale i dati di sis
 
 - **Software**
   - Programma Java per inviare dati del PC tramite MQTT  
-    (scaricabile dal repository GitHub: [])
+    (scaricabile dal repository GitHub: [https://github.com/MattiaB01/SystemMonitor])
   - Broker MQTT (es. Mosquitto)
   - ESP-IDF v5.x
 
