@@ -1,35 +1,39 @@
-Wifi Manager ESP-IDF
-====================
+# ESP32 System monitor
 
-This is a simple wifi manager. It's a pure C esp-idf component.
-It enables easy management of wifi networks through a web page.
+Questo progetto permette a un ESP32 di visualizzare in tempo reale i dati di sistema di un PC (CPU, RAM, spazio su disco) su un piccolo display OLED 128×64 tramite MQTT.
 
-To init the library:
-```
-startWifi();
-```
+---
 
-### How to add the library to your project
+## Scopo
 
-The only thing to do is add the files 
-wifi.c and wifi.h to your project
+- Visualizzare in tempo reale le risorse del PC su un display remoto.
+- Mostrare percentuale CPU, percentuale RAM e spazio libero su disco.
+- Usare ESP32 come **display “Nerd Monitor”**.
+- Permettere configurazione Wi-Fi tramite una rete **Access Point** dedicata e pagina web all’indirizzo `http://esp32`.
 
-To manage your credentials you have to connect via wifi to the SSID:
-**MyESP32AP**
-than you have to connect to the address:
-```
-http://esp32
-```
-Your credentials will be permanently stored in flash memory (NVS - Non-Volatile Storage).
+---
 
-At the next startup the esp32 will try to connect with the previously saved credentials.
+## Requisiti
 
-The library also includes a wifi scanner. 
+- **Hardware**
+  - ESP32 con supporto I²C/SPI
+  - Display OLED 128×64 (SSD1306 o compatibile)
+  - Connessione Wi-Fi
 
-![screen](https://github.com/MattiaB01/Wifi_Manager_EspIDF/assets/104713814/ff005a4a-0c36-4aec-aef9-421d178e1be6)
+- **Software**
+  - Programma Java per inviare dati del PC tramite MQTT  
+    (scaricabile dal repository GitHub: [])
+  - Broker MQTT (es. Mosquitto)
+  - ESP-IDF v5.x
 
+---
 
+## Funzionalità Wi-Fi
 
-
+- Al primo avvio (o se non trova rete configurata), l’ESP32 crea una **rete Wi-Fi Access Point**.
+- Collegandosi a questa rete, si può aprire la pagina web `http://esp32` per inserire:
+  - SSID della rete Wi-Fi
+  - Password della rete Wi-Fi
+- Dopo la configurazione, l’ESP32 si collega automaticamente alla rete e al broker MQTT.
 
 
