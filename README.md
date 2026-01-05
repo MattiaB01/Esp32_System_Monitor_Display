@@ -36,4 +36,5 @@ Questo progetto permette a un ESP32 di visualizzare in tempo reale i dati di sis
   - Password della rete Wi-Fi
 - Dopo la configurazione, l’ESP32 si collega automaticamente alla rete e al broker MQTT.
 
+![Cpu](https://github.com/user-attachments/assets/84c7620e-2607-46fb-a76a-dd8d0b99cc78)
 
